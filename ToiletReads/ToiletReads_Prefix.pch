@@ -1,0 +1,19 @@
+//
+//  ToiletReads_Prefix.pch
+//  ToiletReads
+//
+//  Created by GAURAV SRIVASTAVA on 11/02/15.
+//  Copyright (c) 2015 GAURAV SRIVASTAVA. All rights reserved.
+//
+
+#ifndef ToiletReads_ToiletReads_Prefix_pch
+#define ToiletReads_ToiletReads_Prefix_pch
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#import "TRCommon.h"
+#import "TRHelper.h"
+#import "FlatUIKit.h"
+
+#endif
