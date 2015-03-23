@@ -128,7 +128,7 @@
 		F404A54B1A8C864C00BC24DC /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		F404A57B1A8C89B500BC24DC /* UAAppReviewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UAAppReviewManager.h; sourceTree = "<group>"; };
 		F404A57C1A8C89B500BC24DC /* UAAppReviewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UAAppReviewManager.m; sourceTree = "<group>"; };
-		F4891AEA1A8A9D0B008896EF /* ToiletReads.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToiletReads.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4891AEA1A8A9D0B008896EF /* ToiletStories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToiletStories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4891AEE1A8A9D0B008896EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4891AEF1A8A9D0B008896EF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F4891AF11A8A9D0B008896EF /* TRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TRAppDelegate.h; sourceTree = "<group>"; };
@@ -379,7 +379,7 @@
 		F4891AEB1A8A9D0B008896EF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F4891AEA1A8A9D0B008896EF /* ToiletReads.app */,
+				F4891AEA1A8A9D0B008896EF /* ToiletStories.app */,
 				F4891B031A8A9D0B008896EF /* ToiletReadsTests.xctest */,
 			);
 			name = Products;
@@ -771,7 +771,7 @@
 			);
 			name = ToiletReads;
 			productName = ToiletReads;
-			productReference = F4891AEA1A8A9D0B008896EF /* ToiletReads.app */;
+			productReference = F4891AEA1A8A9D0B008896EF /* ToiletStories.app */;
 			productType = "com.apple.product-type.application";
 		};
 		F4891B021A8A9D0B008896EF /* ToiletReadsTests */ = {
@@ -803,6 +803,7 @@
 				TargetAttributes = {
 					F4891AE91A8A9D0B008896EF = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = BRNDE8W3RV;
 					};
 					F4891B021A8A9D0B008896EF = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -1114,7 +1115,7 @@
 				INFOPLIST_FILE = ToiletReads/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ToiletStories;
 			};
 			name = Debug;
 		};
@@ -1127,7 +1128,7 @@
 				INFOPLIST_FILE = ToiletReads/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ToiletStories;
 			};
 			name = Release;
 		};

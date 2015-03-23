@@ -116,14 +116,17 @@ static const CGFloat kButtonViewHeight = kButtonSize + 2*kVerticalPadding;
 #pragma mark TRFeedModelProtocol
 
 - (void)itemsDownloaded:(NSArray *)items withError:(NSError *)error {
+    feedItems = items;
+    if (self.delegate) {
+        [self.delegate downloadFinishedWithError:error];
+    }
     if (error == nil) {
-        feedItems = items;
-        if (self.delegate) {
-            [self.delegate downloadFinishedWithError:error];
-        }
         [self loadCards];
         xButton.hidden = checkButton.hidden = NO;
         dateLabel.hidden = NO;
+    } else {
+       xButton.hidden = checkButton.hidden = YES;
+        dateLabel.hidden = YES;
     }
 }
 

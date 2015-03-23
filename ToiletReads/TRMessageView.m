@@ -28,8 +28,8 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     
-    CGFloat height = [label.text re_sizeWithFont:label.font].height;
-    CGRect frame = CGRectMake(40, (self.frame.size.height - height)/2.0f, self.frame.size.width - 80, height);
+    CGFloat height = [label.text re_sizeWithFont:label.font constrainedToSize:CGSizeMake(self.frame.size.width - 80.0, INFINITY)].height;
+    CGRect frame = CGRectMake(40.0, (self.frame.size.height - height)/2.0f, self.frame.size.width - 80.0, height);
     label.frame = frame;
 }
 

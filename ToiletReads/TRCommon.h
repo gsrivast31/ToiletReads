@@ -30,8 +30,8 @@ static NSString* const kMoviesString = @"Movies";
 static NSString* const kSportsString = @"Sports";
 static NSString* const kMiscString = @"Miscellaneous";
 
-static NSString* const APP_NAME = @"Toilet Reads";
-static NSString* const APP_ID = @"";
+static NSString* const APP_NAME = @"Toilet Stories";
+static NSString* const APP_ID = @"979220393";
 static NSString* const FEED_URL = @"https://algoist.wordpress.com/feed/";
 
 #endif
