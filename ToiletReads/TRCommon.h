@@ -32,6 +32,6 @@ static NSString* const kMiscString = @"Miscellaneous";
 
 static NSString* const APP_NAME = @"Toilet Stories";
 static NSString* const APP_ID = @"979220393";
-static NSString* const FEED_URL = @"https://algoist.wordpress.com/feed/";
+static NSString* const FEED_URL = @"https://toiletstoriesapp.wordpress.com/feed/";
 
 #endif
