@@ -89,7 +89,7 @@
                 MFMailComposeViewController *mailController = [[MFMailComposeViewController alloc] init];
                 [mailController setMailComposeDelegate:self];
                 [mailController setModalPresentationStyle:UIModalPresentationFormSheet];
-                [mailController setSubject:@"ToiletStories Support"];
+                [mailController setSubject:[NSString stringWithFormat:@"%@ Support", APP_NAME]];
                 [mailController setToRecipients:@[@"gaurav.sri87@gmail.com"]];
                 [mailController setMessageBody:[NSString stringWithFormat:@"%@\n\n", NSLocalizedString(@"Here's my feedback:", @"A default message shown to users when contacting support for help")] isHTML:NO];
                 if(mailController) {
@@ -108,7 +108,10 @@
                 MFMailComposeViewController *mailController = [[MFMailComposeViewController alloc] init];
                 [mailController setMailComposeDelegate:self];
                 [mailController setModalPresentationStyle:UIModalPresentationFormSheet];
-                [mailController setSubject:@"Checkout this:ToiletStories"];
+                [mailController setSubject:[NSString stringWithFormat:@"Checkout this:%@", APP_NAME]];
+                
+                NSString *body = [NSString stringWithFormat:@"Hey! I found this cool app <b><u><a href='%@'>%@</a></u></b>. Check it out.", APP_URL, APP_NAME];
+                [mailController setMessageBody:body isHTML:YES];
                 if(mailController) {
                     [navVC presentViewController:mailController animated:YES completion:nil];
                 }
@@ -120,6 +123,7 @@
                                                           otherButtonTitles:nil];
                 [alertView show];
             }
+            
             
         } else {
             [UAAppReviewManager rateApp];
