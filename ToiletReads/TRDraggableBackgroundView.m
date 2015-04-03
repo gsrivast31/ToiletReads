@@ -234,6 +234,14 @@ static const CGFloat kButtonViewHeight = kButtonSize + 2*kVerticalPadding;
     [dateLabel setText:[dateFormatter stringFromDate:view.item.date]];
 }
 
+-(NSString*)currentArticleLink {
+    if (loadedCards.count) {
+        TRDraggableView *view = (TRDraggableView*)[loadedCards objectAtIndex:0];
+        return view.item.url;
+    }
+    return nil;
+}
+
 - (void)saveFeed:(TRFeedItem*)item {
     TRCoreDataStack* coreDataStack = [TRCoreDataStack defaultStack];
     

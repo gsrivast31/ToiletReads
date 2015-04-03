@@ -24,6 +24,7 @@
 -(void)refresh;
 -(void)cardSwipedLeft:(UIView *)card;
 -(void)cardSwipedRight:(UIView *)card;
+-(NSString*)currentArticleLink;
 
 @property (retain,nonatomic)NSMutableArray* allCards;
 

@@ -39,11 +39,29 @@
 }
 
 - (void)shareCard {
-    NSString* string = @"";
-    NSURL* url = [NSURL URLWithString:@""];
+    NSString* link = [draggableBackground currentArticleLink];
+    if (link == nil) {
+        return;
+    }
     
-    UIActivityViewController *vc = [[UIActivityViewController alloc] initWithActivityItems:@[string, url] applicationActivities:nil];
-    [self.navigationController presentViewController:vc animated:YES completion:nil];
+    NSString* text = [NSString stringWithFormat:@"Hey! I found out this interesting article %@ on this app %@.\n", link, APP_NAME];
+    
+    NSString* shareText = [@"\nYou can find more such articles on this app. Download it from " stringByAppendingString:APP_URL];
+    NSArray* objectsToShare = @[text, shareText];
+    
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:objectsToShare applicationActivities:nil];
+    
+    NSArray *excludeActivities = @[UIActivityTypeAirDrop,
+                                   UIActivityTypePrint,
+                                   UIActivityTypeAssignToContact,
+                                   UIActivityTypeSaveToCameraRoll,
+                                   UIActivityTypeAddToReadingList,
+                                   UIActivityTypePostToFlickr,
+                                   UIActivityTypePostToVimeo];
+    
+    activityVC.excludedActivityTypes = excludeActivities;
+    
+    [self.navigationController presentViewController:activityVC animated:YES completion:nil];
 }
 
 - (void)addDraggableView {
